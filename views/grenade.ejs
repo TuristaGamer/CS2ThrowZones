@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grenade - <%= grenade.id %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        main {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            text-align: center; /* Centralizar conteúdo */
+        }
+        .video-container {
+            display: flex;
+            justify-content: center; /* Centraliza o vídeo horizontalmente */
+            margin: 20px 0;
+        }
+        iframe {
+            width: 1300px; /* Aumenta a largura do vídeo */
+            height: 700px; /* Aumenta a altura do vídeo */
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            z-index: 5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="grenade-detail">
+    <header>
+        <div class="back-button" onclick="history.back()">&larr; Back</div>
+        <a href="/">CS2ThrowZones</a>
+    </header>
+    <main>
+        <h2>Grenade Details</h2>
+        <p><strong>Landing Position:</strong> <%= grenade.landingPosition %></p>
+        <p><strong>Throwing Position:</strong> <%= grenade.throwingPosition %></p>
+        
+        <!-- Embedding the YouTube video -->
+        <% if (grenade.videoID) { %>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/<%= grenade.videoID %>?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        <% } else { %>
+            <p>Invalid video URL</p>
+        <% } %>
+    </main>
+</body>
+</html>

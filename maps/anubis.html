@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubis - CS2ThrowZones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html">CS2ThrowZones</a>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li onclick="filterNades('empty')" id="empty">
+                    <img src="../img/menu-icons/empty-icon.png" alt="Empty">
+                    Empty
+                </li>
+                <li onclick="filterNades('smoke')" id="smoke">
+                    <img src="../img/menu-icons/smoke-icon.png" alt="Smokes">
+                    Smokes
+                </li>
+                <li onclick="filterNades('molotov')" id="molotov">
+                    <img src="../img/menu-icons/molotov-icon.png" alt="Molotovs">
+                    Molotovs
+                </li>
+                <li onclick="filterNades('flashbang')" id="flashbang">
+                    <img src="../img/menu-icons/flashbang-icon.png" alt="Flashbangs">
+                    Flashbangs
+                </li>
+                <li onclick="filterNades('he')" id="he">
+                    <img src="../img/menu-icons/he-icon.png" alt="HE Grenades">
+                    HE Grenades
+                </li>
+            </ul>
+        </div>
+        <div class="map-container">
+            <img src="../img/anubis-map.jpg" alt="Map" class="map-image">
+        </div>
+    </div>
+    <script src="../js/loadHeader.js"></script>
+    <script src="../js/mapFiltering.js"></script>
+</body>
+</html>

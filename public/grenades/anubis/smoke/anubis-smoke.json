@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "map": "anubis",
+    "type": "molotov",
+    "landingPosition": "36.89, 55.85",
+    "throwingPosition": "74.24, 26.81",
+    "video": "https://www.youtube.com/watch?v=fVoOGhp8nkg",
+    "imageUrl": "https://i.imgur.com/mSAlX7y.png"
+  },
+
+  {
+    "id": 2,
+    "map": "anubis",
+    "type": "molotov",
+    "landingPosition": "36.89, 55.85",
+    "throwingPosition": "34.24, 26.81",
+    "video": "https://www.youtube.com/watch?v=fVoOGhp8nkg",
+    "imageUrl": "https://i.imgur.com/Lwv2icZ.png"
+},
+{
+  "id": 3,
+  "map": "anubis",
+  "type": "molotov",
+  "landingPosition": "42.51, 5.04",
+  "throwingPosition": "60.07, 5.15",
+  "video": "https://www.youtube.com/watch?v=fVoOGhp8nkg",
+  "imageUrl": "https://i.imgur.com/Lwv2icZ.png"
+}
+]

@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2c2c;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.map-image, #map-container img {
+    width: 85%;
+    max-width: 850px;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.map-grid-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.map-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.map-grid a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    flex: 1 1 calc(25% - 1rem);
+    max-width: 225px;
+    box-sizing: border-box;
+}
+
+.map-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.map-grid img:hover {
+    transform: scale(1.05);
+}
+
+#map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: none;
+    z-index: 2; /* Garante que os ícones estejam na frente da imagem do mapa */
+}
+
+.grenade-icon {
+    width: 60px; /* Tamanho dos ícones de granada */
+    height: 60px; /* Tamanho dos ícones de granada */
+}
+
+.throw-icon {
+    width: 40px; /* Tamanho dos ícones de lançamento */
+    height: 40px; /* Tamanho dos ícones de lançamento */
+    z-index: 4;
+}
+
+.icon-submit {
+    position: absolute;
+    width: 60px !important; /* Tamanho dos ícones na submissão */
+    height: 60px !important;
+    transform: translate(-50%, -50%);
+    border: none !important;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a1a;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.sidebar ul li.selected {
+    background-color: #333;
+}
+
+.sidebar ul li img {
+    margin-right: 0.5rem;
+}
+
+.count-icon {
+    position: absolute;
+    background-color: #ff000000; /* Cor de fundo do contador */
+    color: hwb(0 2% 98%); /* Cor do texto */
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    transform: translate(-50%, -50%); /* Ajusta a posição do contador */
+    z-index: 3; /* Garante que o contador esteja na frente dos ícones */
+    pointer-events: none; /* Faz com que o contador seja "transparente" para cliques */
+}
+.icon:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Aumenta o ícone em 20% quando hover */
+    transition: transform 0.2s ease-in-out; /* Suaviza a transição de aumento */
+}
+body.grenade-detail {
+    overflow: auto; /* Permite a rolagem apenas para a página de detalhes da granada */
+}
+.video-preview {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    z-index: 5;
+    pointer-events: none; /* Faz com que o iframe seja "transparente" para cliques */
+}

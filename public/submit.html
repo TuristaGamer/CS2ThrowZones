@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit New Grenade - CS2ThrowZones</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <a href="/">CS2ThrowZones</a>
+    </header>
+    <main>
+        <h2>Submit a New Grenade</h2>
+        <form id="submit-form">
+            <label for="map">Map:</label>
+            <select id="map" name="map">
+                <option value="anubis">Anubis</option>
+                <option value="ancient">Ancient</option>
+                <option value="dust2">Dust 2</option>
+                <option value="inferno">Inferno</option>
+                <option value="mirage">Mirage</option>
+                <option value="nuke">Nuke</option>
+                <option value="overpass">Overpass</option>
+                <option value="vertigo">Vertigo</option>
+            </select>
+
+            <label for="type">Type of Grenade:</label>
+            <select id="type" name="type">
+                <option value="smoke">Smoke</option>
+                <option value="molotov">Molotov</option>
+                <option value="flashbang">Flashbang</option>
+                <option value="he">HE Grenade</option>
+            </select>
+
+            <label for="video">YouTube Video URL:</label>
+            <input type="text" id="video" name="video">
+
+            <label for="landing-position">Grenade Landing Position:</label>
+            <input type="text" id="landing-position" name="landing-position" readonly>
+            <button type="button" id="select-landing-position">Select Landing Position</button>
+
+            <label for="throwing-position">Grenade Throwing Position:</label>
+            <input type="text" id="throwing-position" name="throwing-position" readonly>
+            <button type="button" id="select-throwing-position">Select Throwing Position</button>
+
+            <input type="submit" value="Submit Grenade">
+        </form>
+        <div id="map-container">
+            <img src="/img/anubis-map.jpg" alt="Map" id="map-image">
+        </div>
+    </main>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/submit.js"></script>
+    <script>
+        document.getElementById('map').addEventListener('change', function() {
+            const map = this.value;
+            document.getElementById('map-image').src = `/img/${map}-map.jpg`;
+        });
+
+        document.getElementById('type').addEventListener('change', function() {
+            const type = this.value;
+            filterNades(type);
+        });
+
+        function filterNades(type) {
+            const icons = document.querySelectorAll('.icon');
+            icons.forEach(icon => {
+                icon.style.display = 'none';
+            });
+
+            const grenades = JSON.parse(localStorage.getItem('grenades')) || [];
+            const map = document.getElementById('map').value;
+
+            grenades.forEach(grenade => {
+                if (grenade.map === map && (type === 'empty' || grenade.type === type)) {
+                    const icon = document.createElement('img');
+                    icon.src = `/img/icons/${grenade.type}.png`;
+                    icon.classList.add('icon', 'icon-submit'); // Aplicando a classe correta
+                    const [x, y] = grenade.landingPosition.split(',').map(Number);
+                    icon.style.left = `${x}%`;
+                    icon.style.top = `${y}%`;
+                    document.querySelector('#map-container').appendChild(icon);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

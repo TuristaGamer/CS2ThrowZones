@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= mapName.charAt(0).toUpperCase() + mapName.slice(1) %> - CS2ThrowZones</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .coordinates {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            z-index: 2;
+        }
+        .icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -50%);
+            border: none;
+            z-index: 3;
+            transition: transform 0.2s;
+        }
+        .icon:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        .grenade-icon {
+            width: 60px;
+            height: 60px;
+        }
+        .throw-icon {
+            width: 40px;
+            height: 40px;
+            z-index: 4;
+            transform: translate(-50%, -50%);
+        }
+        .count-icon {
+            position: absolute;
+            background-color: #ff000000;
+            color: hsl(0, 0%, 1%);
+            padding: 2px 5px;
+            border-radius: 50%;
+            font-size: 18px;
+            text-align: center;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            pointer-events: none;
+            font-weight: 900;
+        }
+        .sidebar ul li.selected {
+            background-color: #333;
+        }
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+        }
+        #lines-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .image-preview {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid white;
+            border-radius: 10px;
+            display: none;
+            z-index: 5;
+            transform: translate(-50%, -70%);
+        }
+        .map-toggle-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 5;
+        }
+        .map-toggle-buttons button {
+            background-color: #1a1a1a;
+            color: white;
+            border: 1px solid white;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .map-toggle-buttons button.active {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/">CS2ThrowZones</a>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li onclick="filterNades('empty')" id="empty">
+                    <img src="/img/menu-icons/empty-icon.png" alt="Empty">
+                    Empty
+                </li>
+                <li onclick="filterNades('smoke')" id="smoke">
+                    <img src="/img/menu-icons/smoke-icon.png" alt="Smokes">
+                    Smokes
+                </li>
+                <li onclick="filterNades('molotov')" id="molotov">
+                    <img src="/img/menu-icons/molotov-icon.png" alt="Molotovs">
+                    Molotovs
+                </li>
+                <li onclick="filterNades('flashbang')" id="flashbang">
+                    <img src="/img/menu-icons/flashbang-icon.png" alt="Flashbangs">
+                    Flashbangs
+                </li>
+                <li onclick="filterNades('he')" id="he">
+                    <img src="/img/menu-icons/he-icon.png" alt="HE Grenades">
+                    HE Grenades
+                </li>
+            </ul>
+        </div>
+        <div class="map-container" style="position: relative;">
+            <img src="/img/<%= mapName %>-<%= (mapName === 'vertigo' || mapName === 'nuke') ? 'upper' : 'map' %>.jpg" alt="Map" class="map-image" id="map-image" style="width: 100%; z-index: 1;">
+            <div class="coordinates" id="coordinates">Coordinates: (x, y)</div>
+            <div id="icons-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+            <svg id="lines-container"></svg>
+            <img id="image-preview" class="image-preview">
+            <% if (mapName === 'vertigo' || mapName === 'nuke') { %>
+            <div class="map-toggle-buttons">
+                <button id="upper-map-btn" class="active" onclick="toggleMap('upper')">Upper</button>
+                <button id="lower-map-btn" onclick="toggleMap('lower')">Lower</button>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <script>
+        const mapName = "<%= mapName %>";
+        let currentMapPart = "upper";
+
+        // Busca dados de granadas para o mapa
+        fetch(`/grenades/${mapName}/all`)
+            .then(response => response.json())
+            .then(data => {
+                const grenades = data;
+                window.grenades = grenades;
+                filterNades('smoke');
+            });
+
+        document.getElementById('map-image').addEventListener('click', function(event) {
+            const rect = this.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+            const coordinatesDisplay = document.getElementById('coordinates');
+            coordinatesDisplay.textContent = `Coordinates: (${x.toFixed(2)}, ${y.toFixed(2)})`;
+        });
+
+        function toggleMap(part) {
+            currentMapPart = part;
+            document.getElementById('map-image').src = `/img/${mapName}-${part}.jpg`;
+            filterNades(document.querySelector('.sidebar ul li.selected').id);
+            document.getElementById('upper-map-btn').classList.toggle('active', part === 'upper');
+            document.getElementById('lower-map-btn').classList.toggle('active', part === 'lower');
+        }
+    </script>
+    <script src="/js/mapFiltering.js"></script>
+</body>
+</html>
