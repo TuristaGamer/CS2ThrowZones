@@ -295,6 +295,15 @@
       "throwingPosition": "47.89, 41.63",
       "video": "https://www.youtube.com/watch?v=cfsatVdEsAA",
       "imageUrl": "https://i.imgur.com/m1S1CZc.png"
+    },
+    {
+      "id": 34,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "81.26, 23.83",
+      "throwingPosition": "73.77, 54.51",
+      "video": "https://www.youtube.com/watch?v=pQ9XAeLnYVQ",
+      "imageUrl": "https://i.imgur.com/NkLTBpo.png"
     }
   
    
