@@ -133,6 +133,69 @@
       "throwingPosition": "50.00, 59.54",
       "video": "https://www.youtube.com/watch?v=meG6lAi7DZ8",
       "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 16,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "51.99, 45.37",
+      "video": "https://www.youtube.com/watch?v=T7wjGy-Jcsw",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 17,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "16.28, 48.30",
+      "video": "https://www.youtube.com/watch?v=BmxnpzWARvg",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 18,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "31.73, 95.02",
+      "video": "https://www.youtube.com/watch?v=TbSpRCQ6fVA",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 19,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "22.95, 72.66",
+      "video": "https://www.youtube.com/watch?v=8KxHS2QTSdM",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 20,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "9.60, 61.53",
+      "video": "https://www.youtube.com/watch?v=6lN2ooV1NJg",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 21,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "25.64, 60.95",
+      "video": "https://www.youtube.com/watch?v=QKNJBQ3YR-U",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
+    },
+    {
+      "id": 22,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "25.53, 12.70",
+      "throwingPosition": "68.27, 80.74",
+      "video": "https://www.youtube.com/watch?v=hV3jtdpqLpg",
+      "imageUrl": "https://i.imgur.com/TDYfIrh.png"
     }
   
    
