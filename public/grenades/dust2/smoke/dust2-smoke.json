@@ -7,7 +7,17 @@
       "throwingPosition": "28.10, 39.64",
       "video": "https://www.youtube.com/watch?v=C6EinPb5FbI&list=PLzgalgC1yjFHJB3U_HsdCKPmoV57oQ6RX",
       "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 1,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "63.11, 81.79",
+      "video": "https://www.youtube.com/watch?v=ySxXRY3DbRg&list=PLzgalgC1yjFHJB3U_HsdCKPmoV57oQ6RX&index=2",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
     }
+  
    
   ]
   
