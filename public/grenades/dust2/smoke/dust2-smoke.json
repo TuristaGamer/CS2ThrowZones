@@ -5,7 +5,7 @@
       "type": "smoke",
       "landingPosition": "48.13, 40.34",
       "throwingPosition": "28.10, 39.64",
-      "video": "https://www.youtube.com/watch?v=C6EinPb5FbI&list=PLzgalgC1yjFHJB3U_HsdCKPmoV57oQ6RX",
+      "video": "https://www.youtube.com/watch?v=C6EinPb5FbI",
       "imageUrl": "https://i.imgur.com/O9PF8oo.png"
     },
     {
@@ -14,7 +14,115 @@
       "type": "smoke",
       "landingPosition": "48.13, 40.34",
       "throwingPosition": "63.11, 81.79",
-      "video": "https://www.youtube.com/watch?v=ySxXRY3DbRg&list=PLzgalgC1yjFHJB3U_HsdCKPmoV57oQ6RX&index=2",
+      "video": "https://www.youtube.com/watch?v=ySxXRY3DbRg",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 3,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "36.65, 40.93",
+      "video": "https://www.youtube.com/watch?v=81k9PWzW1DM",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 4,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "6.91, 48.42",
+      "video": "https://www.youtube.com/watch?v=S1N_Nfg4_D4",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 5,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "43.68, 86.59",
+      "video": "https://www.youtube.com/watch?v=w7IprapKuHE",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 6,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "48.13, 97.37",
+      "video": "https://www.youtube.com/watch?v=k4JWIUxffrw",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 7,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "44.38, 94.44",
+      "video": "https://www.youtube.com/watch?v=02YsoRjGceg",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 8,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "46.60, 94.44",
+      "video": "https://www.youtube.com/watch?v=PTXooYbsYYw",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 9,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "42.62, 57.79",
+      "video": "https://www.youtube.com/watch?v=t2iv-pZR3JE",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 10,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "55.74, 64.81",
+      "video": "https://www.youtube.com/watch?v=Q8TTJvRRwOc",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 11,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "44.03, 76.05",
+      "video": "https://www.youtube.com/watch?v=zEyCDsWXsCA",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 12,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "60.19, 37.88",
+      "video": "https://www.youtube.com/watch?v=0S4TAX6K4d0",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 13,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "58.78, 67.62",
+      "video": "https://www.youtube.com/watch?v=88VWICWAnVc",
+      "imageUrl": "https://i.imgur.com/O9PF8oo.png"
+    },
+    {
+      "id": 14,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "48.13, 40.34",
+      "throwingPosition": "67.68, 80.62",
+      "video": "https://www.youtube.com/watch?v=D5KSClUN2Bo",
       "imageUrl": "https://i.imgur.com/O9PF8oo.png"
     }
   
