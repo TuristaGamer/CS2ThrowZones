@@ -655,6 +655,24 @@
       "throwingPosition": "48.48, 33.20",
       "video": "https://www.youtube.com/watch?v=bwLWGNKfCKI",
       "imageUrl": "https://i.imgur.com/EptxKcB.png"
+    },
+    {
+      "id": 74,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "18.15, 53.45",
+      "throwingPosition": "49.18, 21.49",
+      "video": "https://www.youtube.com/watch?v=coQcIDZ5hcY",
+      "imageUrl": "https://i.imgur.com/qpV5v4w.png"
+    },
+    {
+      "id": 75,
+      "map": "dust2",
+      "type": "smoke",
+      "landingPosition": "18.15, 53.45",
+      "throwingPosition": "15.81, 11.53",
+      "video": "https://www.youtube.com/watch?v=eXmBHyDmE64",
+      "imageUrl": "https://i.imgur.com/qpV5v4w.png"
     }
 
    
